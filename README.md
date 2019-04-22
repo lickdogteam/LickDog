@@ -1,0 +1,2 @@
+# LickDog
+Software Engineering
