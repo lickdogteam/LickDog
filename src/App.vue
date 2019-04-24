@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">萝卜拱兔到此一游</router-link> |
-      <router-link to="/about">About</router-link>
-      <div>price的修改</div>
-    </div>
-    <router-view/>
+    <mt-header fixed title="固定在顶部"></mt-header>
   </div>
 </template>
 
+<script>
+    export default {
+        name: 'app',
+        components: {
+
+        }
+    }
+</script>
 <style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
