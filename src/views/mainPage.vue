@@ -11,9 +11,23 @@
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
             </mt-swipe-item>
         </mt-swipe>
-        <part-block-container :title="'附近医院'">
-            <div>2222</div>
-        </part-block-container>
+        <div class="main-entry-box">
+            <div @click="goReserve()">
+                <div><img src="../assets/img/register.png" height="32" width="32"/></div>
+                <div>预约挂号</div>
+            </div>
+            <div>
+                <div><img src="../assets/img/surface.png" height="32" width="32"/></div>
+                <div>预约美容</div>
+            </div>
+            <div>
+                <div><img src="../assets/img/text.png" height="32" width="32"/></div>
+                <div>宠物档案</div>
+            </div>
+        </div>
+        <!--<part-block-container :title="'附近医院'">-->
+            <!--<div>2222</div>-->
+        <!--</part-block-container>-->
         <!--<mt-search v-model="searchValue"></mt-search>-->
     </div>
 </template>
@@ -37,7 +51,10 @@
 
         },
         methods: {
-
+            //预约挂号
+            goReserve(){
+                this.$router.push({path:'/reservation',name:'reservation'});
+            }
         }
     }
 </script>
@@ -52,5 +69,12 @@
     .mint-swipe img{
         width: 100%;
         height: auto;
+    }
+    .main-entry-box{
+        background: white;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
     }
 </style>

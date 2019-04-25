@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
+    <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈" style="background: rgba(77, 162, 248, 1)">
       <router-link to="/" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
