@@ -19,6 +19,11 @@ export default new Router({
           path: '/hospitalDetail',
           name: 'hospitalDetail',
           component: () => import('./views/hospitalDetail.vue')
-      }
+      },
+      {
+          path: '/doctorDetail',
+          name: 'doctorDetail',
+          component: () => import('./views/doctorDetail.vue')
+      },
   ]
 })

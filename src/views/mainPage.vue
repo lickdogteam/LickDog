@@ -2,6 +2,7 @@
     <div id="main-page">
         <mt-swipe :auto="4000">
             <mt-swipe-item>
+                <!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556208152704&di=62220fe501d076f1b60fd83e99e63f05&imgtype=0&src=http%3A%2F%2Fgc.zbj.com%2Fupimg%2F6%2F2016%2F0117%2F20160117130132_52469.jpg">-->
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125630141&di=4b0d7ef00c1e67911c361fbd6d387d45&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2Fee17dfb9bedea354f7082697c6b280ab.jpeg"/>
             </mt-swipe-item>
             <mt-swipe-item>

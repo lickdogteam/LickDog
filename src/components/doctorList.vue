@@ -1,6 +1,6 @@
 <template>
     <div id="doctor-list">
-        <div class="doctor-box">
+        <div class="doctor-box" @click="goToDoctorDetail()">
             <div class="box-top">
                 <div class="avatar">
                     <img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
@@ -21,7 +21,7 @@
                 <div class="tag tag-blue">有号</div>
             </div>
         </div>
-        <div class="doctor-box">
+        <div class="doctor-box" @click="goToDoctorDetail()">
             <div class="box-top">
                 <div class="avatar">
                     <img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
@@ -47,7 +47,13 @@
 
 <script>
     export default {
-        name: "doctorList"
+        name: "doctorList",
+        methods:{
+            // 跳转医生详情
+            goToDoctorDetail(){
+                this.$router.push({path:'/doctorDetail',name:'doctorDetail'});
+            }
+        }
     }
 </script>
 
@@ -67,7 +73,7 @@
     .avatar{
         width: 40px;
         height: 40px;
-        border-radius: 25px;
+        border-radius: 20px;
     }
     .name{
         margin-left: 10px;
