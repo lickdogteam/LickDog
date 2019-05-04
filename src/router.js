@@ -15,15 +15,20 @@ export default new Router({
       name: 'reservation',
       component: () => import('./views/reservation.vue')
     },
-      {
-          path: '/hospitalDetail',
-          name: 'hospitalDetail',
-          component: () => import('./views/hospitalDetail.vue')
-      },
-      {
-          path: '/doctorDetail',
-          name: 'doctorDetail',
-          component: () => import('./views/doctorDetail.vue')
-      },
+    {
+      path: '/hospitalDetail',
+      name: 'hospitalDetail',
+      component: () => import('./views/hospitalDetail.vue')
+    },
+    {
+      path: '/doctorDetail',
+      name: 'doctorDetail',
+      component: () => import('./views/doctorDetail.vue')
+    },
+    {
+      path: '/record',
+      name: 'record',
+      component: () => import('./views/record/index.vue')
+    }
   ]
 })

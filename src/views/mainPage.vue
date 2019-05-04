@@ -21,7 +21,7 @@
                 <div><img src="../assets/img/surface.png" height="32" width="32"/></div>
                 <div>预约美容</div>
             </div>
-            <div>
+            <div @click="goRecord()">
                 <div><img src="../assets/img/text.png" height="32" width="32"/></div>
                 <div>宠物档案</div>
             </div>
@@ -55,6 +55,9 @@
             //预约挂号
             goReserve(){
                 this.$router.push({path:'/reservation',name:'reservation'});
+            },
+            goRecord(){
+                this.$router.push({path:'/record',name:'record'});
             }
         }
     }
