@@ -26,9 +26,9 @@
                 <div>宠物档案</div>
             </div>
         </div>
-        <!--<part-block-container :title="'附近医院'">-->
-            <!--<div>2222</div>-->
-        <!--</part-block-container>-->
+        <part-block-container :title="'养宠小知识'" :subTitle="'更多文章'" @clickSubTitle="handleClickSubTitle()" style="margin: 10px 0">
+            <div>2222</div>
+        </part-block-container>
         <!--<mt-search v-model="searchValue"></mt-search>-->
     </div>
 </template>
@@ -58,6 +58,10 @@
             },
             goRecord(){
                 this.$router.push({path:'/record',name:'record'});
+            },
+            //
+            handleClickSubTitle(){
+              console.log('jump to!');
             }
         }
     }
