@@ -3,7 +3,7 @@
         <div class="doctor-box" @click="goToDoctorDetail()">
             <div class="box-top">
                 <div class="avatar">
-                    <img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125630141&di=4b0d7ef00c1e67911c361fbd6d387d45&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2Fee17dfb9bedea354f7082697c6b280ab.jpeg"/>
+                    <img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
                 </div>
                 <div class="name">陈钰琪</div>
                 <div class="line-c"></div>
@@ -21,27 +21,27 @@
                 <div class="tag tag-blue">有号</div>
             </div>
         </div>
-        <div class="doctor-box" @click="goToDoctorDetail()">
-            <div class="box-top">
-                <div class="avatar">
-                    <img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412663161&di=62d761fdfd62773f529823ca89fbe675&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F37acfeb918205139edf67dfddde079c2.jpeg"/>
-                </div>
-                <div class="name">刘佳怡</div>
-                <div class="line-c"></div>
-                <div class="work">医生</div>
-            </div>
-            <div class="line-r"></div>
-            <div class="doctor-info">
-                <div><img src="../assets/img/age.png" style="height: 18px"/></div>
-                <div style="margin: 0 10px 0 5px">医龄1年</div>
-                <div><img src="../assets/img/reserve.png" style="height: 18px"/></div>
-                <div style="margin: 0 10px 0 5px">预约15次</div>
-            </div>
-            <div class="doctor-tag-box">
-                <div class="tag tag-gray">无夜诊</div>
-                <div class="tag tag-blue">有号</div>
-            </div>
-        </div>
+        <!--<div class="doctor-box" @click="goToDoctorDetail()">-->
+            <!--<div class="box-top">-->
+                <!--<div class="avatar">-->
+                    <!--<img class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412663161&di=62d761fdfd62773f529823ca89fbe675&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F37acfeb918205139edf67dfddde079c2.jpeg"/>-->
+                <!--</div>-->
+                <!--<div class="name">刘佳怡</div>-->
+                <!--<div class="line-c"></div>-->
+                <!--<div class="work">医生</div>-->
+            <!--</div>-->
+            <!--<div class="line-r"></div>-->
+            <!--<div class="doctor-info">-->
+                <!--<div><img src="../assets/img/age.png" style="height: 18px"/></div>-->
+                <!--<div style="margin: 0 10px 0 5px">医龄1年</div>-->
+                <!--<div><img src="../assets/img/reserve.png" style="height: 18px"/></div>-->
+                <!--<div style="margin: 0 10px 0 5px">预约15次</div>-->
+            <!--</div>-->
+            <!--<div class="doctor-tag-box">-->
+                <!--<div class="tag tag-gray">无夜诊</div>-->
+                <!--<div class="tag tag-blue">有号</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </template>
 

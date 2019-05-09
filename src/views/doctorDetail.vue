@@ -76,7 +76,7 @@
         </div>
 
         <mt-popup v-model="popupVisibleMorning" position="bottom" style="width: 100%">
-            <mt-picker  ref="picker" :slots="slotsMorning"  :show-toolbar="true" v-model="time" :visible-item-count="5">
+            <mt-picker  ref="picker" :slots="slotsMorning"  :show-toolbar="true" v-model="time1" :visible-item-count="5">
                 <div class="picker-toolbar-title">
                         <div class="btn-cancel" @click="popupVisibleMorning = !popupVisibleMorning">取消</div> 
                         <div class="btn-sure" @click="handleConfirm">确定</div>
@@ -84,7 +84,7 @@
             </mt-picker>
         </mt-popup>
         <mt-popup v-model="popupVisibleAfternoon" position="bottom" style="width: 100%">
-            <mt-picker  ref="picker" :slots="slotsAfternoon"  :show-toolbar="true" v-model="time" :visible-item-count="5">
+            <mt-picker  ref="picker" :slots="slotsAfternoon"  :show-toolbar="true" v-model="time2" :visible-item-count="5">
                 <div class="picker-toolbar-title">
                         <div class="btn-cancel" @click="popupVisibleAfternoon = !popupVisibleAfternoon">取消</div> 
                         <div class="btn-sure" @click="handleConfirm">确定</div>
@@ -92,7 +92,7 @@
             </mt-picker>
         </mt-popup>
         <mt-popup v-model="popupVisibleEvening" position="bottom" style="width: 100%">
-            <mt-picker  ref="picker" :slots="slotsEvening"  :show-toolbar="true" v-model="time" :visible-item-count="5">
+            <mt-picker  ref="picker" :slots="slotsEvening"  :show-toolbar="true" v-model="time3" :visible-item-count="5">
                 <div class="picker-toolbar-title">
                         <div class="btn-cancel" @click="popupVisibleEvening = !popupVisibleEvening">取消</div> 
                         <div class="btn-sure" @click="handleConfirm">确定</div>
@@ -165,7 +165,9 @@
                         textAlign: 'left'
                     }
                 ],
-                time:''
+                time1:'',
+                time2:'',
+                time3:'',
             }
         },
         created(){
@@ -194,7 +196,8 @@
             },
             // 确认预约
             handleConfirm(){
-                console.log(this.time);
+                console.log(this.time1);
+                this.$router.push({path:'/confirm',name:'confirm'});
             }
         }
     }

@@ -92,6 +92,7 @@
                 this.$router.push({path:'/reservation',name:'reservation'});
             },
             goRecord(){
+                sessionStorage.removeItem('isReserve');
                 this.$router.push({path:'/record',name:'record'});
             },
             //

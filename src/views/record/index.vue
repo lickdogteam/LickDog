@@ -4,7 +4,7 @@
             <img src="" alt="暂无宠物" style="margin: 10px">
         </div>
         <div v-else>
-            <PetsList :petsList="petsList"/>
+            <PetsList :petsList="petsList" :isReserve="isReverse"/>
         </div>
         <mt-button type="primary" style="width: 90%;margin: 5%" @click="editPets()">添加宠物</mt-button>
     </div>
@@ -36,10 +36,13 @@
                         type:'哈士奇'
                     },
                 ],
+                isReverse:''
             }
         },
         created(){
-
+            console.log(this.$route.params,'params');
+            this.isReserve=this.$route.params.isReserve?this.$route.params.isReserve:false;
+            console.log(this.isReserve);
         },
         methods:{
             editPets(){

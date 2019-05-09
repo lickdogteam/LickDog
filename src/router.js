@@ -44,6 +44,11 @@ export default new Router({
       path: '/knowlage/list',
       name: 'konwlageList',
       component: () => import('./views/knowlageList.vue')
-    }
+    },
+      {
+          path: '/confirm',
+          name: 'confirm',
+          component: () => import('./views/confirm.vue')
+      }
   ]
 })
