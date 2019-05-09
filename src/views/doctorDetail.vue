@@ -198,6 +198,7 @@
             handleConfirm(){
                 console.log(this.time1);
                 this.$router.push({path:'/confirm',name:'confirm'});
+                sessionStorage.removeItem('petName');
             }
         }
     }

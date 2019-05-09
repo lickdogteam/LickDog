@@ -46,15 +46,19 @@
                 <div>13758257159</div>
             </div>
         </div>
+        <div style="text-align: center">
+            <button @click="goConfirm">确认预约</button>
+        </div>
     </div>
 </template>
 
 <script>
+    import { Toast } from 'mint-ui';
     export default {
         name: "confirm",
         data(){
             return{
-                petName:sessionStorage.getItem('petName')
+                petName:sessionStorage.getItem('petName')?sessionStorage.getItem('petName'):'点击选择'
             }
         },
         methods:{
@@ -63,7 +67,27 @@
                 sessionStorage.setItem('isReserve',true);
                 // this.$router.push({path:'/record',name:'record',params:{isReserve:true}})
                 this.$router.push({path:'/record',name:'record'})
-            }
+            },
+            // 确认预约
+            goConfirm(){
+                let that=this;
+                Toast('预约成功');
+                this.$router.push({path:'/',name:'index'});
+                // window.$common.post('', {
+                //     "args":{
+                //         "customerId":JSON.parse(localStorage.getItem('memberInfo')).customerId,
+                //         "orderStatus":that.currentOrderList
+                //     }
+                // })
+                //     .then(function (response) {
+                //         console.log(response);
+                //         Toast('预约成功');
+                //         this.$router.push({path:'/',name:'index'});
+                //     })
+                //     .catch(function (error) {
+                //         console.log(error);
+                //     });
+            },
         }
     }
 </script>
@@ -130,5 +154,16 @@
             color: black;
             flex: 1;
         }
+    }
+    button{
+        width: 80%;
+        background:rgba(77,162,248,0.8);
+        border: none;
+        color: white;
+        border-radius: 20px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+        outline: none;
     }
 </style>
