@@ -34,6 +34,16 @@ export default new Router({
       path: '/record',
       name: 'record',
       component: () => import('./views/record/index.vue')
+    },
+    {
+      path: '/record/edit',
+      name: 'recordEdit',
+      component: () => import('./views/record/addAndEdit.vue')
+    },
+    {
+      path: '/knowlage/list',
+      name: 'konwlageList',
+      component: () => import('./views/knowlageList.vue')
     }
   ]
 })

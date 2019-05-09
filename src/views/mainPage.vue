@@ -96,7 +96,8 @@
             },
             //
             handleClickSubTitle(){
-              console.log('jump to!');
+                console.log('jump to!');
+                this.$router.push({path:'/knowlageList',name:'konwlageList'});
             }
         }
     }

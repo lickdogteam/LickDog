@@ -6,7 +6,7 @@
         <div v-else>
             <PetsList :petsList="petsList"/>
         </div>
-        <mt-button type="primary" style="width: 90%;margin: 5%">添加宠物</mt-button>
+        <mt-button type="primary" style="width: 90%;margin: 5%" @click="editPets()">添加宠物</mt-button>
     </div>
 </template>
 
@@ -42,7 +42,9 @@
 
         },
         methods:{
-
+            editPets(){
+                this.$router.push({path:'/record/edit'})
+            }
         }
     }
 </script>
