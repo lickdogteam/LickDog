@@ -45,10 +45,20 @@ export default new Router({
       name: 'konwlageList',
       component: () => import('./views/knowlageList.vue')
     },
-      {
-          path: '/confirm',
-          name: 'confirm',
-          component: () => import('./views/confirm.vue')
-      }
+    {
+      path: '/message/index',
+      name: 'messageIndex',
+      component: () => import('./views/message.vue')
+    },
+    {
+      path: '/message/order',
+      name: 'orderList',
+      component: () => import('./views/orderList.vue')
+    },
+    {
+      path: '/confirm',
+      name: 'confirm',
+      component: () => import('./views/confirm.vue')
+    }
   ]
 })

@@ -1,5 +1,12 @@
 <template>
     <div id="knowlage">
+        <div>
+            <mt-search
+                    v-model="keywords"
+                    cancel-text="取消"
+                    placeholder="搜索">
+            </mt-search>
+        </div>
         <div style="padding: 10px">
             <ul
                     v-infinite-scroll="loadMore"
@@ -29,9 +36,13 @@
 </template>
 
 <script>
-    import { InfiniteScroll } from 'mint-ui';
+    import { InfiniteScroll, Search } from 'mint-ui';
     export default {
         name: "knowlage-list",
+        components:{
+            InfiniteScroll,
+            Search
+        },
         data(){
             return{
                 list:[
@@ -132,7 +143,8 @@
                     },
                 ],
                 loading:false,
-                maxNum:10
+                maxNum:10,
+                keywords:''
             }
         },
         methods:{
@@ -172,5 +184,8 @@
             font-weight: bold;
             color: black;
         }
+    }
+    /deep/.mint-search{
+        height: auto;
     }
 </style>
