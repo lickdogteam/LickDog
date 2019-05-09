@@ -12,9 +12,9 @@
                 <div>我的订单</div>
                 <div @click="getMore()">更多></div>
             </div>
-            <div class="message-display">
+            <div class="message-display" style="line-height: 30px">
                 <div>宠物：{{list[0].name}}</div>
-                <div>挂号</div>
+                <mt-button type="primary" style="height: 30px">挂号</mt-button>
                 <div>{{list[0].status}}</div>
             </div>
             <div class="message-display">
@@ -26,8 +26,7 @@
         </div>
         <div style="background: white">
             <div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">
-                <div>我的订单</div>
-                <div>更多></div>
+                <div>其他</div>
             </div>
             <div class="message-display"  style="padding-bottom: 10px">
                 <div>练习客服：45898745678765</div>
