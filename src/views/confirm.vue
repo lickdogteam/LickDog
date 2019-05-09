@@ -70,23 +70,31 @@
             },
             // 确认预约
             goConfirm(){
+                console.log('12212');
                 let that=this;
-                Toast('预约成功');
-                this.$router.push({path:'/',name:'index'});
-                // window.$common.post('', {
+                // Toast('预约成功');
+                // this.$router.push({path:'/',name:'index'});
+                // window.$common.post('/table/reservation', {
                 //     "args":{
-                //         "customerId":JSON.parse(localStorage.getItem('memberInfo')).customerId,
-                //         "orderStatus":that.currentOrderList
+                //         "reservationType":1
                 //     }
                 // })
-                //     .then(function (response) {
-                //         console.log(response);
-                //         Toast('预约成功');
-                //         this.$router.push({path:'/',name:'index'});
-                //     })
-                //     .catch(function (error) {
-                //         console.log(error);
-                //     });
+                // .then(function (response) {
+                //     console.log(response);
+                //     Toast('预约成功');
+                //     this.$router.push({path:'/',name:'index'});
+                // })
+                // .catch(function (error) {
+                //     console.log(error);
+                // });
+
+                let args = {
+                    "reservationType":1
+                };
+                window.$common.post("/table/reservation",args,res =>{
+                    Toast('预约成功');
+                    that.$router.push({path:'/',name:'index'});
+                })
             },
         }
     }

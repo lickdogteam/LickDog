@@ -10,8 +10,7 @@ export default{
     post:function (funcUrl,argsData,successFunc) {
         let UA=navigator.userAgent;
         let TOKEN="dreamtouch";
-        // const baseUrl="http://112.124.70.173:5102";//测试地址
-        const baseUrl="http://127.0.0.1:5102";//正式地址
+        const baseUrl="http://172.20.10.3:7001";
         window.axios.post(baseUrl+funcUrl, {
             "args":argsData,
             "token":TOKEN,
