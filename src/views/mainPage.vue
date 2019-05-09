@@ -25,6 +25,10 @@
                 <div><img src="../assets/img/text.png" height="32" width="32"/></div>
                 <div>宠物档案</div>
             </div>
+            <div @click="goMessage()">
+                <div><img src="../assets/img/text.png" height="32" width="32"/></div>
+                <div>个人中心</div>
+            </div>
         </div>
         <part-block-container :title="'养宠小知识'" :subTitle="'更多文章'" @clickSubTitle="handleClickSubTitle()" style="margin: 10px 0">
             <div class="block-item">
@@ -40,7 +44,7 @@
                 <div>
                     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg">
                 </div>
-                <div style="margin-left: 20px">
+                <div style="margin-left: 20px;">
                     <div class="title">干货|自己在家怎么给狗狗剪毛</div>
                     <div>你剪个试试</div>
                 </div>
@@ -99,6 +103,9 @@
             handleClickSubTitle(){
                 console.log('jump to!');
                 this.$router.push({path:'/knowlageList',name:'konwlageList'});
+            },
+            goMessage(){
+                this.$router.push({path:'/message/index',name:'messageIndex'});
             }
         }
     }
@@ -134,11 +141,11 @@
             border-radius: 5px;
         }
         .title{
-            width: 200px;
+            /*width: 200px;*/
             overflow: hidden;
             text-overflow:ellipsis;
             white-space:nowrap;
-            margin-top: 4px;
+            /*margin-top: 4px;*/
             font-size: 16px;
             color: black;
         }
