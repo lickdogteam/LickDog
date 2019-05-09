@@ -1,6 +1,6 @@
 <template>
     <div id="pets-list">
-        <div style="display: flex;margin-bottom: 10px;background: white;padding:0 5px;border-radius: 5px" v-for="item in petsList" @click="choosePet(item)">
+        <div style="display: flex;margin-bottom: 10px;background: white;padding:0 15px;border-radius: 5px" v-for="item in petsList" @click="choosePet(item)">
             <div style="padding-top:26px">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412455780&di=e1f847a07b72602db4c8c3b429edad70&imgtype=0&src=http%3A%2F%2Fwww.chachaba.com%2Fnews%2Fuploads%2F190507%2F5304_190507152704_1.jpg" alt="" style="height: 50px;width:50px;">
             </div>
