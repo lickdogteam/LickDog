@@ -88,13 +88,13 @@
                 //     console.log(error);
                 // });
 
-                let args = {
-                    "reservationType":1
-                };
-                window.$common.post("/table/reservation",args,res =>{
+                // let args = {
+                //     "reservationType":1
+                // };
+                // window.$common.post("/table/reservation",args,res =>{
                     Toast('预约成功');
                     that.$router.push({path:'/',name:'index'});
-                })
+                // })
             },
         }
     }
