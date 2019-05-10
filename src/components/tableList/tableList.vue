@@ -1,9 +1,13 @@
 <template>
+    <div id="table-list">
+        <div class="main-container">
 
+        </div>
+    </div>
 </template>
 <script>
     export default {
-        name: '',
+        name: 'tableList',
         props: {},
         data () {
             return {}
@@ -18,5 +22,7 @@
     }
 </script>
 <style scoped>
+    .main-container{
 
+    }
 </style>

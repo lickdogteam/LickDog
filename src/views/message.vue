@@ -7,11 +7,7 @@
                 <div style="position: absolute;bottom: 0">137****3921</div>
             </div>
         </div>
-        <div style="background: white;margin-bottom: 10px">
-            <div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">
-                <div>我的订单</div>
-                <div @click="getMore()">更多></div>
-            </div>
+        <part-block-container :title="'我的订单'" :subTitle="'更多'" @clickSubTitle="getMore()" style="margin: 10px 0">
             <div class="message-display" style="line-height: 30px">
                 <div>宠物：{{list[0].name}}</div>
                 <mt-button type="primary" style="height: 30px">挂号</mt-button>
@@ -23,7 +19,24 @@
             <div class="message-display" style="padding-bottom: 10px">
                 <div>时间：{{list[0].date}}</div>
             </div>
-        </div>
+        </part-block-container>
+        <!--<div style="background: white;margin-bottom: 10px">-->
+            <!--<div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">-->
+                <!--<div>我的订单</div>-->
+                <!--<div @click="getMore()">更多></div>-->
+            <!--</div>-->
+            <!--<div class="message-display" style="line-height: 30px">-->
+                <!--<div>宠物：{{list[0].name}}</div>-->
+                <!--<mt-button type="primary" style="height: 30px">挂号</mt-button>-->
+                <!--<div>{{list[0].status}}</div>-->
+            <!--</div>-->
+            <!--<div class="message-display">-->
+                <!--<div>地址：{{list[0].address}}</div>-->
+            <!--</div>-->
+            <!--<div class="message-display" style="padding-bottom: 10px">-->
+                <!--<div>时间：{{list[0].date}}</div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div style="background: white">
             <div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">
                 <div>其他</div>
@@ -36,8 +49,12 @@
 </template>
 
 <script>
+    import partBlockContainer from '../components/partBlockContainer.vue';
     export default {
         name: "message",
+        components:{
+            partBlockContainer
+        },
         data(){
             return{
                 list:[
