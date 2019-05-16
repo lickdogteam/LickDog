@@ -1,70 +1,47 @@
 <template>
     <div id="main-page">
-        <mt-swipe :auto="4000">
-            <mt-swipe-item>
-                <!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556208152704&di=62220fe501d076f1b60fd83e99e63f05&imgtype=0&src=http%3A%2F%2Fgc.zbj.com%2Fupimg%2F6%2F2016%2F0117%2F20160117130132_52469.jpg">-->
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557377157760&di=ad721031a79b9c234df1981b57df5f3e&imgtype=0&src=http%3A%2F%2Fimg.alicdn.com%2Fimgextra%2Fi2%2F1070877094%2FTB2AS9QXHBnpuFjSZFGXXX51pXa_%2521%25211070877094-0-headline_editor.jpg"/>
-            </mt-swipe-item>
-            <mt-swipe-item>
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557377157760&di=ad721031a79b9c234df1981b57df5f3e&imgtype=0&src=http%3A%2F%2Fimg.alicdn.com%2Fimgextra%2Fi2%2F1070877094%2FTB2AS9QXHBnpuFjSZFGXXX51pXa_%2521%25211070877094-0-headline_editor.jpg" />
-            </mt-swipe-item>
-            <mt-swipe-item>
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557377157760&di=ad721031a79b9c234df1981b57df5f3e&imgtype=0&src=http%3A%2F%2Fimg.alicdn.com%2Fimgextra%2Fi2%2F1070877094%2FTB2AS9QXHBnpuFjSZFGXXX51pXa_%2521%25211070877094-0-headline_editor.jpg"/>
-            </mt-swipe-item>
-        </mt-swipe>
+        <img src="../assets/img/background.png" alt="" style="height: 100px;display: block">
+        <div class="main-title-head">
+            <div style="font-size: 22px;color: #FFFFFF;line-height: 31px;margin-right: 140px">舔狗网</div>
+            <div style="font-size: 17px;color: #FFFFFF;line-height: 31px;display: flex;">
+                <div><img src="../assets/img/position.png" style="height:16px;width: 16px " alt=""></div>
+                <div>浙江科技学院</div>
+            </div>
+        </div>
+        <div class="main-title-img">
+            <mt-swipe :auto="4000">
+                <mt-swipe-item v-for="item in bannerList">
+                    <!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556208152704&di=62220fe501d076f1b60fd83e99e63f05&imgtype=0&src=http%3A%2F%2Fgc.zbj.com%2Fupimg%2F6%2F2016%2F0117%2F20160117130132_52469.jpg">-->
+                    <img style="border-radius: 20px;" :src="item.imgUrl"/>
+                </mt-swipe-item>
+            </mt-swipe>
+        </div>
         <div class="main-entry-box">
             <div @click="goReserve()">
-                <div><img src="../assets/img/register.png" height="32" width="32"/></div>
-                <div>预约挂号</div>
+                <div><img src="../assets/img/doctor.png" height="60" width="60"/></div>
+                <div class="entry-color">预约挂号</div>
             </div>
             <div>
-                <div><img src="../assets/img/surface.png" height="32" width="32"/></div>
-                <div>预约美容</div>
+                <div><img src="../assets/img/shower.png" height="60" width="60"/></div>
+                <div class="entry-color">预约美容</div>
             </div>
             <div @click="goRecord()">
-                <div><img src="../assets/img/text.png" height="32" width="32"/></div>
-                <div>宠物档案</div>
+                <div><img src="../assets/img/foster.png" height="60" width="60"/></div>
+                <div class="entry-color">宠物档案</div>
             </div>
             <div @click="goMessage()">
-                <div><img src="../assets/img/message.png" height="32" width="32"/></div>
-                <div>个人中心</div>
+                <div><img src="../assets/img/pet-files.png" height="60" width="60"/></div>
+                <div class="entry-color">个人中心</div>
             </div>
         </div>
-        <part-block-container :title="'养宠小知识'" :subTitle="'更多文章'" @clickSubTitle="handleClickSubTitle()" style="margin: 10px 0">
-            <div class="block-item">
-            <div>
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629449&di=cf29bde83e2791892dd3398dc9678fa2&imgtype=0&src=http%3A%2F%2Fwww.bhsyzx.cn%2FStudent%2FUploadFiles_8721%2F201305%2F2013052812433897.jpg">
-            </div>
-            <div style="margin-left: 20px">
-                <div class="title">寄生虫已到达战场，铲屎官驱虫迫在眉睫</div>
-                <div>Are you ready?</div>
-            </div>
-        </div>
-            <div class="block-item">
+        <part-block-container :title="'养宠小知识'" :subTitle="'更多文章'" @clickSubTitle="handleClickSubTitle()" style="margin: 10px 0;font-size: 18px;color:#414141">
+            <div class="block-item" v-for="item in knowlageList">
                 <div>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg">
+                    <img :src="item.imgPath">
                 </div>
-                <div style="margin-left: 20px;">
-                    <div class="title">干货|自己在家怎么给狗狗剪毛</div>
-                    <div>你剪个试试</div>
-                </div>
-            </div>
-            <div class="block-item">
-                <div>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png">
-                </div>
-                <div style="margin-left: 20px">
-                    <div class="title">手把手教你如何正确养猫</div>
-                    <div>你会养猫吗</div>
-                </div>
-            </div>
-            <div class="block-item">
-                <div>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg">
-                </div>
-                <div style="margin-left: 20px">
-                    <div class="title">养猫秘籍！你不能错过的养猫</div>
-                    <div>无</div>
+                <div style="margin-left: 20px;position: relative">
+                    <div class="title">{{item.title}}</div>
+                    <div style="font-size: 14px;height: 20px;position: absolute;bottom: 0">{{item.descrip}}</div>
                 </div>
             </div>
         </part-block-container>
@@ -81,7 +58,115 @@
         },
         data () {
             return {
-                searchValue:''
+                searchValue:'',
+                bannerList:[
+                    {
+                        imgUrl:require("../assets/img/banner.png")
+                    },
+                    {
+                        imgUrl:require("../assets/img/banner@2x.png")
+                    },
+                    {
+                        imgUrl:require("../assets/img/banner@3x.png")
+                    },
+                ],
+                knowlageList:[
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg',
+                        title:'干货|自己在家怎么给狗狗剪毛',
+                        descrip:'你剪个试试'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg',
+                        title:'干货|自己在家怎么给狗狗剪毛',
+                        descrip:'你剪个试试'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg',
+                        title:'干货|自己在家怎么给狗狗剪毛',
+                        descrip:'你剪个试试'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg',
+                        title:'干货|自己在家怎么给狗狗剪毛',
+                        descrip:'你剪个试试'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557410629448&di=244ff660b3700c0bd59b64e305bea99c&imgtype=0&src=http%3A%2F%2Fg2.hexunimg.cn%2F2014-09-22%2F168723571.jpg',
+                        title:'干货|自己在家怎么给狗狗剪毛',
+                        descrip:'你剪个试试'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168005&di=c2e3a1d51156e93d4def4a590b7e2430&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002011525_SPcLr.png',
+                        title:'手把手教你如何正确养猫',
+                        descrip:'你会养猫吗'
+                    },
+                    {
+                        imgPath:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412168007&di=7b8753698a91b2dd0243c1106e5dcbab&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201407%2F14%2F20140714210050_M5BZc.jpeg',
+                        title:'养猫秘籍！你不能错过的养猫',
+                        descrip:'进来玩啊'
+                    },
+                ],
             }
         },
         created() {
@@ -111,12 +196,29 @@
     }
 </script>
 <style scoped lang="less">
+    .main-page{
+        position: relative;
+    }
+    .main-title-head{
+        position: absolute;
+        padding: 20px;
+        display: flex;
+        top:0;
+    }
+    .main-title-img{
+        background: white;
+        padding: 10px 20px;
+    }
+    .entry-color{
+        font-size: 14px;
+        color: #414141;
+    }
     .lkd-swiper-img-container{
-        height: 200px;
+        /*height: 200px;*/
         width: 100%;
     }
     .mint-swipe{
-        height: 200px;
+        height: 140px;
     }
     .mint-swipe img{
         width: 100%;
@@ -124,7 +226,7 @@
     }
     .main-entry-box{
         background: white;
-        padding: 20px 0;
+        padding: 0 20px 10px 20px;
         display: flex;
         justify-content: space-around;
         text-align: center;
@@ -149,5 +251,8 @@
             font-size: 16px;
             color: black;
         }
+    }
+    /deep/.container{
+        padding: 20px;
     }
 </style>
