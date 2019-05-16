@@ -61,6 +61,7 @@
 </template>
 
 <script>
+    import { Indicator } from 'mint-ui';
     import { Toast } from 'mint-ui';
     export default {
         name: "confirm",
@@ -78,31 +79,46 @@
             },
             // 确认预约
             goConfirm(){
-                console.log('12212');
                 let that=this;
-                // Toast('预约成功');
-                // this.$router.push({path:'/',name:'index'});
-                // window.$common.post('/table/reservation', {
-                //     "args":{
-                //         "reservationType":1
-                //     }
-                // })
-                // .then(function (response) {
-                //     console.log(response);
-                //     Toast('预约成功');
-                //     this.$router.push({path:'/',name:'index'});
-                // })
-                // .catch(function (error) {
-                //     console.log(error);
-                // });
+                if(that.petName==='点击选择'){
+                    Toast('请选择宠物');
+                }
+                else{
+                    console.log('12212');
+                    // Toast('预约成功');
+                    // this.$router.push({path:'/',name:'index'});
+                    // window.$common.post('/table/reservation', {
+                    //     "args":{
+                    //         "reservationType":1
+                    //     }
+                    // })
+                    // .then(function (response) {
+                    //     console.log(response);
+                    //     Toast('预约成功');
+                    //     this.$router.push({path:'/',name:'index'});
+                    // })
+                    // .catch(function (error) {
+                    //     console.log(error);
+                    // });
 
-                // let args = {
-                //     "reservationType":1
-                // };
-                // window.$common.post("/table/reservation",args,res =>{
-                    Toast('预约成功');
-                    that.$router.push({path:'/',name:'index'});
-                // })
+                    // let args = {
+                    //     "reservationType":1
+                    // };
+                    // window.$common.post("/table/reservation",args,res =>{
+                    //     Toast('预约成功');
+                    //     that.$router.push({path:'/',name:'index'});
+                    // })
+
+                    Indicator.open('加载中...');
+                    setTimeout(function () {
+                        Indicator.close();
+                        Toast('预约成功');
+                        that.$router.push({path:'/',name:'index'});
+
+                    },1500);
+                }
+
+
             },
         }
     }
