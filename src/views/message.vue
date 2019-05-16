@@ -76,10 +76,22 @@
                         address:'浙江省杭州市下城区文晖路107号',
                         date:'2017-04-25 10:00 ~ 10:30'
                     }
-                ]
+                ],
+                memberId:1
             }
         },
+        created(){
+            this.getOrderList();
+        },
         methods:{
+            getOrderList(){
+                let args = {
+                    "memberId":this.memberId
+                };
+                window.$common.post("/table/reservation",args,res =>{
+                    // this.list=res.
+                })
+            },
             getMore(){
                 this.$router.push({path:'/message/order',name:'orderList'});
             }

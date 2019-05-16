@@ -26,7 +26,7 @@
                 <div>宠物档案</div>
             </div>
             <div @click="goMessage()">
-                <div><img src="../assets/img/text.png" height="32" width="32"/></div>
+                <div><img src="../assets/img/message.png" height="32" width="32"/></div>
                 <div>个人中心</div>
             </div>
         </div>
