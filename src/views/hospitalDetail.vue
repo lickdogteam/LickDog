@@ -46,10 +46,11 @@
 
 <style scoped lang="less">
     .hospital-background{
-        background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557412455783&di=b9bd89730addb25ba6924bc7e2ca811e&imgtype=0&src=http%3A%2F%2Fimg5.goumin.com%2Fattachments%2Fbbs%2F201904%2F19%2F201904191645499384.jpg");
+        background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558000901883&di=1c2d7583e231dfcf7de77dcd231e4a8d&imgtype=0&src=http%3A%2F%2Fwww.wallcoo.com%2Fanimal%2FDogs_Summer_and_Winter%2Fwallpapers%2F1920x1080%2FDogsB5_Toby.jpg");
         height: 200px;
         width: 100%;
         background-size: 100%;
+        margin-top: -10px;
     }
     .hospital-name{
         color: white;

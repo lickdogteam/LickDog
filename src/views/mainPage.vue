@@ -1,12 +1,18 @@
 <template>
     <div id="main-page">
-        <img src="../assets/img/background.png" alt="" style="height: 100px;display: block">
-        <div class="main-title-head">
-            <div style="font-size: 22px;color: #FFFFFF;line-height: 31px;margin-right: 140px">舔狗网</div>
-            <div style="font-size: 17px;color: #FFFFFF;line-height: 31px;display: flex;">
-                <div><img src="../assets/img/position.png" style="height:16px;width: 16px " alt=""></div>
-                <div>浙江科技学院</div>
-            </div>
+        <!--<img src="../assets/img/background.png" alt="" style="height: 100px;display: block">-->
+        <!--<div class="main-title-head">-->
+            <!--<div style="font-size: 22px;color: #FFFFFF;line-height: 31px;margin-right: 140px">舔狗网</div>-->
+            <!--<div style="font-size: 17px;color: #FFFFFF;line-height: 31px;display: flex;">-->
+                <!--<div><img src="../assets/img/position.png" style="height:16px;width: 16px " alt=""></div>-->
+                <!--<div>浙江科技学院</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div style="height: 100px">
+            <img style="width: 100%" src="../assets/img/background.png"/>
+            <div style="position: absolute;font-size: 22px;color: #FFFFFF;top:30px;left: 20px;font-weight: bold">舔狗</div>
+            <div style="position: absolute;font-size: 18px;color: #FFFFFF;top:32px;right: 20px;">浙江科技学院西和公寓</div>
+            <div style="position: absolute;top: 36px;left: 156px"><img src="../assets/img/addr.png" height="15" width="15"/></div>
         </div>
         <div class="main-title-img">
             <mt-swipe :auto="4000">
