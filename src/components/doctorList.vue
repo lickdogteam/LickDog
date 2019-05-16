@@ -8,13 +8,15 @@
                 <div class="name">陈钰琪</div>
                 <div class="line-c"></div>
                 <div class="work">医生</div>
+                <div style="padding-top: 5px"><img src="../assets/img/clock@3x.png" style="width: 28px;float: right;margin-right: 20px"/></div>
             </div>
             <div class="line-r"></div>
             <div class="doctor-info">
                 <div><img src="../assets/img/age.png" style="height: 18px"/></div>
                 <div style="margin: 0 10px 0 5px">医龄1年</div>
                 <div><img src="../assets/img/reserve.png" style="height: 18px"/></div>
-                <div style="margin: 0 10px 0 5px">预约25次</div>
+                <div style="margin: 0 10px 0 5px;flex: 1">预约25次</div>
+                <div style="margin-right: 20px;color: #414141;">预约</div>
             </div>
             <div class="doctor-tag-box">
                 <div class="tag tag-gray">无夜诊</div>
@@ -91,6 +93,7 @@
     }
     .work{
         margin-left: 10px;
+        flex: 1;
     }
     .doctor-info{
         display: flex;

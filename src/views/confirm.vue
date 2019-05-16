@@ -1,5 +1,11 @@
 <template>
     <div id="confirm">
+        <div style="height: 100px">
+            <img style="width: 100%" src="../assets/img/background.png"/>
+            <div style="position: absolute;font-size: 22px;color: #FFFFFF;top:30px;left: 20px;font-weight: bold">预约</div>
+            <div style="position: absolute;font-size: 18px;color: #FFFFFF;top:32px;right: 20px;">舔狗宠物医院小和山分院</div>
+            <div style="position: absolute;top: 36px;left: 136px"><img src="../assets/img/hospital.png" height="15" width="15"/></div>
+        </div>
         <div class="doctor">
             <div class="doctor-info-box">
                 <div class="info-top">
@@ -7,6 +13,8 @@
                         <img class="avatar" style="align-self: center" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
                     </div>
                     <div style="align-self: center;margin-left: 20px">
+                        <img src="../assets/img/clock@3x.png" style="position: absolute;top: 116px;right: 28px;width: 26px"/>
+                        <div style="position: absolute;top: 150px;right: 24px">预约</div>
                         <div>陈钰琪 医生</div>
                         <div class="doctor-info">
                             <div><img src="../assets/img/age.png" style="height: 18px"/></div>

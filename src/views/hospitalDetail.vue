@@ -1,5 +1,11 @@
 <template>
     <div id="hospitalDetail">
+        <div style="height: 100px">
+            <img style="width: 100%" src="../assets/img/background.png"/>
+            <div style="position: absolute;font-size: 22px;color: #FFFFFF;top:30px;left: 20px;font-weight: bold">医院详情</div>
+            <div style="position: absolute;font-size: 18px;color: #FFFFFF;top:32px;right: 20px;">舔狗宠物医院小和山分院</div>
+            <div style="position: absolute;top: 36px;left: 136px"><img src="../assets/img/hospital.png" height="15" width="15"/></div>
+        </div>
         <div class="hospital-background">
             <div class="hospital-name">舔狗宠物医院小和山分院</div>
             <div class="hospital-intro">杭州市舔狗有限公司小和山分公司</div>
@@ -8,18 +14,18 @@
             <div style="display: flex"><img src="../assets/img/location.png" style="height: 24px"/></div>
             <div style="flex: 1;font-size: 14px">地址：浙江·杭州市留和路318号</div>
             <div class="line"></div>
-            <div style="display: flex"><a href="tel:13758257159"><img src="../assets/img/phone.png"/></a></div>
+            <div style="display: flex;padding-top: 10px"><a href="tel:13758257159"><img src="../assets/img/telephone@3x.png" style="width: 30px;height: 30px"/></a></div>
         </div>
         <div class="date-table-box">
             <table class="date-table">
                 <tr>
-                    <th>5月11日</th>
-                    <th>5月12日</th>
-                    <th>5月13日</th>
-                    <th>5月14日</th>
-                    <th>5月15日</th>
-                    <th>5月16日</th>
                     <th>5月17日</th>
+                    <th>5月18日</th>
+                    <th>5月19日</th>
+                    <th>5月20日</th>
+                    <th>5月21日</th>
+                    <th>5月22日</th>
+                    <th>5月23日</th>
                 </tr>
             </table>
         </div>
@@ -48,13 +54,13 @@
     .hospital-name{
         color: white;
         position: absolute;
-        top: 140px;
+        top: 240px;
         left: 20px;
     }
     .hospital-intro{
         color: white;
         position: absolute;
-        top: 160px;
+        top: 260px;
         left: 20px;
         font-size: 14px;
     }
