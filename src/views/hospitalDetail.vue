@@ -6,10 +6,15 @@
             <div style="position: absolute;font-size: 18px;color: #FFFFFF;top:32px;right: 20px;">舔狗宠物医院小和山分院</div>
             <div style="position: absolute;top: 36px;left: 136px"><img src="../assets/img/hospital.png" height="15" width="15"/></div>
         </div>
-        <div class="hospital-background">
-            <div class="hospital-name">舔狗宠物医院小和山分院</div>
-            <div class="hospital-intro">杭州市舔狗有限公司小和山分公司</div>
+        <div style="padding: 0 20px;background: white">
+            <img
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558000901883&di=1c2d7583e231dfcf7de77dcd231e4a8d&imgtype=0&src=http%3A%2F%2Fwww.wallcoo.com%2Fanimal%2FDogs_Summer_and_Winter%2Fwallpapers%2F1920x1080%2FDogsB5_Toby.jpg"
+                alt="" style="width: 100%;border-radius: 20px">
         </div>
+        <!--<div class="hospital-background">-->
+            <!--<div class="hospital-name">舔狗宠物医院小和山分院</div>-->
+            <!--<div class="hospital-intro">杭州市舔狗有限公司小和山分公司</div>-->
+        <!--</div>-->
         <div class="hospital-address">
             <div style="display: flex"><img src="../assets/img/location.png" style="height: 24px"/></div>
             <div style="flex: 1;font-size: 14px">地址：浙江·杭州市留和路318号</div>
@@ -46,11 +51,11 @@
 
 <style scoped lang="less">
     .hospital-background{
-        background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558000901883&di=1c2d7583e231dfcf7de77dcd231e4a8d&imgtype=0&src=http%3A%2F%2Fwww.wallcoo.com%2Fanimal%2FDogs_Summer_and_Winter%2Fwallpapers%2F1920x1080%2FDogsB5_Toby.jpg");
-        height: 200px;
+        /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558000901883&di=1c2d7583e231dfcf7de77dcd231e4a8d&imgtype=0&src=http%3A%2F%2Fwww.wallcoo.com%2Fanimal%2FDogs_Summer_and_Winter%2Fwallpapers%2F1920x1080%2FDogsB5_Toby.jpg");*/
+        /*height: 200px;*/
         width: 100%;
-        background-size: 100%;
-        margin-top: -10px;
+        /*background-size: 100%;*/
+        margin-top: -20px;
     }
     .hospital-name{
         color: white;
