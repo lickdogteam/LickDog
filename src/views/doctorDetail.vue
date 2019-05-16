@@ -1,11 +1,20 @@
 <template>
     <div id="doctorDetail">
+        <div style="height: 100px">
+            <img style="width: 100%" src="../assets/img/background.png"/>
+            <div style="position: absolute;font-size: 22px;color: #FFFFFF;top:30px;left: 20px;font-weight: bold">医生详情</div>
+            <div style="position: absolute;font-size: 18px;color: #FFFFFF;top:32px;right: 20px;">舔狗宠物医院小和山分院</div>
+            <div style="position: absolute;top: 36px;left: 136px"><img src="../assets/img/hospital.png" height="15" width="15"/></div>
+        </div>
         <div class="doctor-info-box">
             <div class="info-top">
                 <div style="align-self: center">
                     <img class="avatar" style="align-self: center" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556125760355&di=51d5dc16d6610075d9bf1e258da63196&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_ls%2F0%2F7969894780_640330%2F0"/>
                 </div>
                 <div style="align-self: center;margin-left: 20px">
+
+                    <img src="../assets/img/clock@3x.png" style="position: absolute;top: 116px;right: 28px;width: 26px"/>
+                    <div style="position: absolute;top: 150px;right: 24px">预约</div>
                     <div>陈钰琪 医生</div>
                     <div class="doctor-info">
                         <div><img src="../assets/img/age.png" style="height: 18px"/></div>
@@ -34,16 +43,16 @@
             <table width="100%" border="0" class="table" cellpadding="0" cellspacing="0" style="margin-top: 10px">
                 <tr style="background: #F8F8F8">
                     <th class="th_border"></th>
-                    <th class="th_border">周六<div>5.10</div></th>
-                    <th class="th_border">周日<div>5.11</div></th>
-                    <th class="th_border">周一<div>5.12</div></th>
-                    <th class="th_border">周二<div>5.13</div></th>
-                    <th class="th_border">周三<div>5.14</div></th>
-                    <th class="th_border">周四<div>5.15</div></th>
-                    <th class="th_border">周五<div>5.16</div></th>
+                    <th class="th_border">周六<div>5.17</div></th>
+                    <th class="th_border">周日<div>5.18</div></th>
+                    <th class="th_border">周一<div>5.19</div></th>
+                    <th class="th_border">周二<div>5.20</div></th>
+                    <th class="th_border">周三<div>5.21</div></th>
+                    <th class="th_border">周四<div>5.22</div></th>
+                    <th class="th_border">周五<div>5.23</div></th>
                 </tr>
                 <tr>
-                    <td style="color: black">上午</td>
+                    <td style="color: #003765;background: #DDF0FF;">上午</td>
                     <td></td>
                     <td></td>
                     <td class="available" @click="reserve(1)">预约</td>
@@ -53,7 +62,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td style="color: black">下午</td>
+                    <td style="color: #003765;background: #DDF0FF;">下午</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -63,7 +72,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td style="color: black">晚上</td>
+                    <td style="color: #003765;background: #DDF0FF;">晚上</td>
                     <td></td>
                     <td class="available" @click="reserve(3)">预约</td>
                     <td></td>
@@ -253,7 +262,7 @@
         padding: 20px;
     }
     .table{border-collapse:collapse; font-size:13px; height:24px;line-height:24px; color:white; text-align:center;}
-    .table tr th{background:rgba(187,187,187,1); color:#000; font-size:13px;height:24px; line-height:24px;}
+    .table tr th{background: #DDF0FF; color: #003765; font-size:13px;height:24px; line-height:24px;}
     .table tr th.th_border{border-right:solid 1px #FFF;border-left:solid 1px #fff;}
     .table tr td{border:solid 1px white;background:rgba(187,187,187,0.5);height: 45px}
     .available{
