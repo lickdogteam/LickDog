@@ -1,5 +1,6 @@
 <template>
     <div id="message">
+        <img src="../assets/img/background.png" alt="" style="height: 100px;display: block">
         <div style="display: flex;padding: 10px;margin-bottom: 10px;background: white">
             <div><img src="../../src/assets/img/avatar.jpg" alt="" style="width: 50px;height: 50px"></div>
             <div style="margin-left: 10px;position: relative">
@@ -20,23 +21,6 @@
                 <div>时间：{{list[0].date}}</div>
             </div>
         </part-block-container>
-        <!--<div style="background: white;margin-bottom: 10px">-->
-            <!--<div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">-->
-                <!--<div>我的订单</div>-->
-                <!--<div @click="getMore()">更多></div>-->
-            <!--</div>-->
-            <!--<div class="message-display" style="line-height: 30px">-->
-                <!--<div>宠物：{{list[0].name}}</div>-->
-                <!--<mt-button type="primary" style="height: 30px">挂号</mt-button>-->
-                <!--<div>{{list[0].status}}</div>-->
-            <!--</div>-->
-            <!--<div class="message-display">-->
-                <!--<div>地址：{{list[0].address}}</div>-->
-            <!--</div>-->
-            <!--<div class="message-display" style="padding-bottom: 10px">-->
-                <!--<div>时间：{{list[0].date}}</div>-->
-            <!--</div>-->
-        <!--</div>-->
         <div style="background: white">
             <div class="message-display" style="border-bottom: 1px solid saddlebrown;padding-bottom: 10px">
                 <div>其他</div>
@@ -88,9 +72,10 @@
                 let args = {
                     "memberId":this.memberId
                 };
-                window.$common.post("/table/reservation",args,res =>{
-                    // this.list=res.
-                })
+                // window.$common.post("/table/reservation",args,res =>{
+                //     console.log(res);
+                //     // this.list=res.
+                // })
             },
             getMore(){
                 this.$router.push({path:'/message/order',name:'orderList'});
