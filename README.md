@@ -1,5 +1,5 @@
 # lickdog
-#hello
+
 
 ## Project setup
 ```
